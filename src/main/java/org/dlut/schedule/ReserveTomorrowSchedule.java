@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@Slf4j
 public class ReserveTomorrowSchedule {
     @Autowired
     private Reserve4Tomorrow reserve4Tomorrow;
@@ -20,10 +19,10 @@ public class ReserveTomorrowSchedule {
             reserve4Tomorrow.setSelectedLibrary(selectedLibrary);
             reserve4Tomorrow.setSelectedRoom(selectedRoom);
             reserve4Tomorrow.tomorrowReserve();
-            log.debug("预定明天座位成功");
+            System.out.println(("预定明天座位成功"));
         }
         catch (InterruptedException e){
-            log.debug("预定明天座位失败");
+            System.out.println(("预定明天座位失败"));
         }
     }
 

@@ -10,10 +10,14 @@ xxl:
 dlut:
   reserveUser:
     user1:
-      username:
-      password:
+      username: 20201081112
+      password: YYF1234567yyf@
   wantedSeats:
-
+    - 140
+    - 141
+    - 142
+    - 143
+    - 144
   library:
     bochuan:
       code: 17

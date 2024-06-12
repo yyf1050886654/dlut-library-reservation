@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
+import java.util.Map;
 
 @Slf4j
 @Component
@@ -21,10 +22,10 @@ public class LockSeatSchedule {
             if (hour>=8 && hour <= 20){
                 lockCurrentSeat.reserveSeat();
             }
-            log.debug("任务调度成功");
+            System.out.println(("任务调度成功"));
         }
         catch (InterruptedException e){
-            log.debug("任务调度失败");
+            System.out.println(("任务调度失败"));
         }
     }
 }

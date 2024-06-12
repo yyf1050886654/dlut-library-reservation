@@ -33,7 +33,6 @@ public class LockCurrentSeat {
     private static final String regexRoom = "图书馆(\\d{3})";
     private Map<String,String> infoMap;
     private WebDriver driver;
-
     /**
      * 文本分割
      * @param text tr标签的文本
@@ -125,6 +124,8 @@ public class LockCurrentSeat {
             driver.get("http://seat.lib.dlut.edu.cn/yanxiujian/client/loginOut.php");
             driver.quit();
         }
-
+    }
+    public void reset(){
+        this.infoMap = null;
     }
 }
