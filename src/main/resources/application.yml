@@ -10,8 +10,8 @@ xxl:
 dlut:
   reserveUser:
     user1:
-      username: 20201081112
-      password: YYF1234567yyf@
+      username:
+      password:
   wantedSeats:
     - 140
     - 141
