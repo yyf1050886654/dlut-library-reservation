@@ -1,5 +1,6 @@
 package org.dlut.tasks;
 
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.dlut.config.LibraryConfig;
 import org.openqa.selenium.By;
@@ -8,14 +9,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +24,7 @@ import java.util.regex.Pattern;
 @Slf4j
 public class LockCurrentSeat {
 
-    @Autowired
+    @Resource
     private LibraryConfig libraryConfig;
     private static final String regexSeat = "座位标签：(\\d{3})";
     private static final String regexLibrary = "(.{2})图书馆";

@@ -1,23 +1,19 @@
 server:
-  port: 10086
-xxl:
-  job:
-    admin:
-      addresses: http://192.168.200.130:8888/xxl-job-admin
-    executor:
-      appname: dlut-library-schedule
-      port: 8989
+  port: 8080
 dlut:
   reserveUser:
     user1:
-      username:
-      password:
+      username: 22409178
+      password: YYF1234567yyf@
   wantedSeats:
     - 140
-    - 141
-    - 142
-    - 143
-    - 144
+    - 164
+    - 133
+    - 157
+    - 139
+    - 163
+    - 134
+    - 158
   library:
     bochuan:
       code: 17

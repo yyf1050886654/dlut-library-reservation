@@ -1,20 +1,20 @@
 package org.dlut.schedule;
 
-import com.xxl.job.core.handler.annotation.XxlJob;
+import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.dlut.tasks.LockCurrentSeat;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
-import java.util.Map;
 
 @Slf4j
 @Component
 public class LockSeatSchedule {
-    @Autowired
+    @Resource
     private LockCurrentSeat lockCurrentSeat;
-    @XxlJob("LockSeatSchedule")
+
+    @Scheduled(cron = "0 0,30 * * * ?")
     public void schedule(){
         try {
             int hour = LocalDateTime.now().getHour();
